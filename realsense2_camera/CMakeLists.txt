@@ -17,6 +17,7 @@ find_package(catkin REQUIRED COMPONENTS
     tf
     ddynamic_reconfigure
     diagnostic_updater
+    rospack
     )
 
 if(BUILD_WITH_OPENMP)
@@ -76,14 +77,17 @@ catkin_package(
     image_transport
     ddynamic_reconfigure
     nav_msgs
+    rospack
     )
 
 add_library(${PROJECT_NAME}
     include/constants.h
     include/realsense_node_factory.h
+    include/framos_realsense_node_factory.h
     include/base_realsense_node.h
     include/t265_realsense_node.h
     src/realsense_node_factory.cpp
+    src/framos_realsense_node_factory.cpp
     src/base_realsense_node.cpp
     src/t265_realsense_node.cpp
     )
@@ -98,6 +102,7 @@ target_link_libraries(${PROJECT_NAME}
     ${realsense2_LIBRARY}
     ${catkin_LIBRARIES}
     ${CMAKE_THREAD_LIBS_INIT}
+    yaml-cpp
     )
 
 # Install nodelet library
