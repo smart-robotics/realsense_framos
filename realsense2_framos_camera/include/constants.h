@@ -14,7 +14,7 @@
 /* Return version in "X.Y.Z" format */
 #define REALSENSE_ROS_VERSION_STR (VAR_ARG_STRING(REALSENSE_ROS_MAJOR_VERSION.REALSENSE_ROS_MINOR_VERSION.REALSENSE_ROS_PATCH_VERSION))
 
-namespace realsense2_camera
+namespace realsense2_framos_camera
 {
     const uint16_t SR300_PID        = 0x0aa5; // SR300
     const uint16_t SR300v2_PID      = 0x0B48; // SR305
@@ -90,4 +90,4 @@ namespace realsense2_camera
 
     const float ROS_DEPTH_SCALE = 0.001;
     using stream_index_pair = std::pair<rs2_stream, int>;
-}  // namespace realsense2_camera
+}  // namespace realsense2_framos_camera

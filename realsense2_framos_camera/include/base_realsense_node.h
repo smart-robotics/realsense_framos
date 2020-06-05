@@ -22,7 +22,7 @@
 #include <atomic>
 #include <thread>
 
-namespace realsense2_camera
+namespace realsense2_framos_camera
 {
     struct FrequencyDiagnostics
     {

@@ -1,6 +1,6 @@
 <launch>
   <arg name="external_manager"    default="false"/>
-  <arg name="manager"             default="realsense2_camera_manager"/>
+  <arg name="manager"             default="realsense2_framos_camera_manager"/>
   <arg name="serial_no"           default=""/>
   <arg name="usb_port_id"         default=""/>
   <arg name="device_type"         default=""/>
@@ -91,7 +91,7 @@
 
 
   <node unless="$(arg external_manager)" pkg="nodelet" type="nodelet" name="$(arg manager)" args="manager" output="screen" required="$(arg required)"/>
-  <node pkg="nodelet" type="nodelet" name="realsense2_camera" args="load realsense2_camera/RealSenseNodeFactory $(arg manager)" required="$(arg required)">
+  <node pkg="nodelet" type="nodelet" name="realsense2_framos_camera" args="load realsense2_framos_camera/RealSenseNodeFactory $(arg manager)" required="$(arg required)">
     <param name="serial_no"                type="str"  value="$(arg serial_no)"/>
     <param name="usb_port_id"              type="str"  value="$(arg usb_port_id)"/>
     <param name="device_type"              type="str"  value="$(arg device_type)"/>

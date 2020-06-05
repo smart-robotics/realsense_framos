@@ -5,7 +5,7 @@
 
 #include "../include/realsense_node_factory.h"
 
-namespace realsense2_camera
+namespace realsense2_framos_camera
 {
     class FramosRealSenseNodeFactory : public nodelet::Nodelet
     {

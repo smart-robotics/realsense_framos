@@ -297,12 +297,12 @@ def run_tests(tests):
             print 
             print '*'*8 + ' Starting ROS ' + '*'*8
             print 'running node (%d/%d)' % (run_no, num_of_startups)
-            cmd_params = ['roslaunch', 'realsense2_camera', 'rs_from_file.launch'] + params_str.split(' ')
+            cmd_params = ['roslaunch', 'realsense2_framos_camera', 'rs_from_file.launch'] + params_str.split(' ')
             print 'running command: ' + ' '.join(cmd_params)
             p_wrapper = subprocess.Popen(cmd_params, stdout=None, stderr=None)
             time.sleep(2)
             service_list = rosservice.get_service_list()
-            is_node_up = len([service for service in service_list if 'realsense2_camera/' in service]) > 0
+            is_node_up = len([service for service in service_list if 'realsense2_framos_camera/' in service]) > 0
             if is_node_up:
                 print 'Node is UP'
                 break

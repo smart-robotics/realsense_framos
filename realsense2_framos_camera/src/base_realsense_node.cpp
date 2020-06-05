@@ -5,7 +5,7 @@
 #include <cctype>
 #include <mutex>
 
-using namespace realsense2_camera;
+using namespace realsense2_framos_camera;
 using namespace ddynamic_reconfigure;
 
 // stream_index_pair sip{stream_type, stream_index};
@@ -264,7 +264,7 @@ std::map<std::string, int> get_enum_method(rs2::options sensor, rs2_option optio
     return dict;
 }
 
-namespace realsense2_camera
+namespace realsense2_framos_camera
 {
 
 template <typename K, typename V>

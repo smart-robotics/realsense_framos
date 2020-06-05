@@ -202,10 +202,10 @@ The wrapper publishes static transformations(TFs). The Frame Ids are divided int
 - base_link: For example: camera_link. A reference frame for the device. In D400 series and SR300 it is the depth frame. In T265, the pose frame.
 
 
-### realsense2_description package:
+### realsense2_framos_description package:
 For viewing included models, a separate package is included. For example:
 ```bash
-roslaunch realsense2_description view_d415_model.launch
+roslaunch realsense2_framos_description view_d415_model.launch
 ```
 
 ### Unit tests:

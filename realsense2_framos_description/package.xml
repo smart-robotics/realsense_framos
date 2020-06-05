@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>realsense2_description</name>
+  <name>realsense2_framos_description</name>
   <version>2.2.12</version>
   <description>RealSense Camera description package for Intel 3D D400 cameras</description>
   <maintainer email="sergey.dorodnicov@intel.com">Sergey Dorodnicov</maintainer>

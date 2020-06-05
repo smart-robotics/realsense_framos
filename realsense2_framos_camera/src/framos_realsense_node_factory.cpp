@@ -15,12 +15,12 @@
 #include "yaml-cpp/yaml.h"
 #include <ros/package.h>
 
-using namespace realsense2_camera;
+using namespace realsense2_framos_camera;
 
 #define REALSENSE_ROS_EMBEDDED_VERSION_STR (VAR_ARG_STRING(VERSION: REALSENSE_ROS_MAJOR_VERSION.REALSENSE_ROS_MINOR_VERSION.REALSENSE_ROS_PATCH_VERSION))
 constexpr auto realsense_ros_camera_version = REALSENSE_ROS_EMBEDDED_VERSION_STR;
 
-PLUGINLIB_EXPORT_CLASS(realsense2_camera::FramosRealSenseNodeFactory, nodelet::Nodelet)
+PLUGINLIB_EXPORT_CLASS(realsense2_framos_camera::FramosRealSenseNodeFactory, nodelet::Nodelet)
 
 FramosRealSenseNodeFactory::FramosRealSenseNodeFactory()
 {
@@ -58,7 +58,7 @@ FramosRealSenseNodeFactory::~FramosRealSenseNodeFactory()
 void FramosRealSenseNodeFactory::loadParameters()
 {
 	std::string multicam_config_file;
-	std::string path = ros::package::getPath("realsense2_camera");
+	std::string path = ros::package::getPath("realsense2_framos_camera");
 	ros::NodeHandle privateNh = getPrivateNodeHandle();
 
 	privateNh.param("multicam_config_file", multicam_config_file, std::string("/config/multicam_config_file.yaml"));

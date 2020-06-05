@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>realsense2_camera</name>
+  <name>realsense2_framos_camera</name>
   <version>2.2.12</version>
   <description>RealSense Camera package allowing access to Intel T265 Tracking module and SR300 and D400 3D cameras</description>
   <maintainer email="sergey.dorodnicov@intel.com">Sergey Dorodnicov</maintainer>
@@ -26,7 +26,7 @@
   <depend>tf</depend>
   <depend>ddynamic_reconfigure</depend>
   <depend>diagnostic_updater</depend>
-  <depend>librealsense2</depend>
+  <depend>librealsense2-framos</depend>
   <depend>rospack</depend>
   <export>
     <nodelet plugin="${prefix}/nodelet_plugins.xml" />

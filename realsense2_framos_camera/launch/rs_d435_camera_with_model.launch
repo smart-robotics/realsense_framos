@@ -4,7 +4,7 @@
   <arg name="camera"              default="camera"/>
   <arg name="tf_prefix"           default="$(arg camera)"/>
   <arg name="external_manager"    default="false"/>
-  <arg name="manager"             default="realsense2_camera_manager"/>
+  <arg name="manager"             default="realsense2_framos_camera_manager"/>
 
   <arg name="fisheye_width"       default="640"/>
   <arg name="fisheye_height"      default="480"/>
@@ -50,7 +50,7 @@
   <arg name="allow_no_texture_points"   default="false"/>
 
   <group ns="$(arg camera)">
-    <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml">
+    <include file="$(find realsense2_framos_camera)/launch/includes/nodelet.launch.xml">
       <arg name="tf_prefix"                value="$(arg tf_prefix)"/>
       <arg name="external_manager"         value="$(arg external_manager)"/>
       <arg name="manager"                  value="$(arg manager)"/>
@@ -102,8 +102,8 @@
   </group>
 
   <!-- Loads the camera model -->
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find realsense2_description)/urdf/test_d435_camera.urdf.xacro' use_nominal_extrinsics:=false"/>
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find realsense2_framos_description)/urdf/test_d435_camera.urdf.xacro' use_nominal_extrinsics:=false"/>
 
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find realsense2_description)/rviz/urdf.rviz" required="true"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find realsense2_framos_description)/rviz/urdf.rviz" required="true"/>
 </launch>

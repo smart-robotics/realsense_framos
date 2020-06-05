@@ -21,7 +21,7 @@ to publish XYZRGB point cloud like an OpenNI camera.
 NOTICE: To use this launch file you must first install ros package rgbd_launch.
 
 To launch Realsense with software registeration (ROS Image Pipeline and rgbd_launch):
-    $ roslaunch realsense2_camera rs_rgbd.launch
+    $ roslaunch realsense2_framos_camera rs_rgbd.launch
 Processing enabled by ROS driver:
     # depth rectification
 Processing enabled by this node:
@@ -30,7 +30,7 @@ Processing enabled by this node:
     # pointcloud_xyzrgb generation
 
 To launch Realsense with hardware registeration (ROS Realsense depth alignment):
-    $ roslaunch realsense2_camera rs_rgbd.launch align_depth:=true
+    $ roslaunch realsense2_framos_camera rs_rgbd.launch align_depth:=true
 Processing enabled by ROS driver:
     # depth rectification
     # depth registration
@@ -43,7 +43,7 @@ Processing enabled by this node:
   <arg name="camera"              default="camera"/>
   <arg name="tf_prefix"           default="$(arg camera)"/>
   <arg name="external_manager"    default="false"/>
-  <arg name="manager"             default="realsense2_camera_manager"/>
+  <arg name="manager"             default="realsense2_framos_camera_manager"/>
 
   <!-- Camera device specific arguments -->
 
@@ -114,7 +114,7 @@ Processing enabled by this node:
   <group ns="$(arg camera)">
 
     <!-- Launch the camera device nodelet-->
-    <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml">
+    <include file="$(find realsense2_framos_camera)/launch/includes/nodelet.launch.xml">
       <arg name="external_manager"         value="$(arg external_manager)"/>
       <arg name="manager"                  value="$(arg manager)"/>
       <arg name="tf_prefix"                value="$(arg tf_prefix)"/>
