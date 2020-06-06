@@ -3,13 +3,13 @@
   <name>realsense2_framos_camera</name>
   <version>2.2.12</version>
   <description>RealSense Camera package allowing access to Intel T265 Tracking module and SR300 and D400 3D cameras</description>
-  <maintainer email="sergey.dorodnicov@intel.com">Sergey Dorodnicov</maintainer>
-  <maintainer email="doron.hirshberg@intel.com">Doron Hirshberg</maintainer>
+  <maintainer email="marc@hanheide.net">Marc Hanheide</maintainer>
   <license>Apache 2.0</license>
   
   <url type="website">http://www.ros.org/wiki/RealSense</url>
   <url type="bugtracker">https://github.com/intel-ros/realsense/issues</url>
 
+  <author email="marc@hanheide.net">Marc Hanheide</author>
   <author email="sergey.dorodnicov@intel.com">Sergey Dorodnicov</author>
   <author email="doron.hirshberg@intel.com">Doron Hirshberg</author>
   <buildtool_depend>catkin</buildtool_depend>
@@ -28,6 +28,7 @@
   <depend>diagnostic_updater</depend>
   <depend>librealsense2_framos</depend>
   <depend>rospack</depend>
+  <depend>yaml-cpp</depend>
   <export>
     <nodelet plugin="${prefix}/nodelet_plugins.xml" />
   </export>
