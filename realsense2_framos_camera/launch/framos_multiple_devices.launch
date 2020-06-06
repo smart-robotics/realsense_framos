@@ -10,7 +10,7 @@
     <node pkg="nodelet" type="nodelet" name="realsense2_framos_camera" args="load realsense2_framos_camera/FramosRealSenseNodeFactory $(arg manager)" required="$(arg required)">
       <param name="multicam_config_file"     type="str"  value="$(arg multicam_config_file)"/>
       
-      <rosparam file="$(find realsense2_framos_camera)$(arg multicam_config_file)" command="load"/>
+      <rosparam file="$(arg multicam_config_file)" command="load"/>
 
     </node>
   </group>

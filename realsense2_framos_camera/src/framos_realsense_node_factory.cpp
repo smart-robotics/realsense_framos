@@ -61,8 +61,8 @@ void FramosRealSenseNodeFactory::loadParameters()
 	std::string path = ros::package::getPath("realsense2_framos_camera");
 	ros::NodeHandle privateNh = getPrivateNodeHandle();
 
-	privateNh.param("multicam_config_file", multicam_config_file, std::string("/config/multicam_config_file.yaml"));
-	YAML::Node config = YAML::LoadFile(path+multicam_config_file);
+	privateNh.param("multicam_config_file", multicam_config_file, std::string(path+"/config/multicam_config_file.yaml"));
+	YAML::Node config = YAML::LoadFile(multicam_config_file);
 
 	for(YAML::iterator it=config.begin(); it!=config.end(); ++it)
 	{
