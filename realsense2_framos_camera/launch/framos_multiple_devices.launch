@@ -1,6 +1,6 @@
 <launch>
   <arg name="namespace" default="camera"/>
-  <arg name="multicam_config_file" default="/config/multicam_config_file.yaml"/>
+  <arg name="multicam_config_file" default="$(find realsense2_framos_camera)/config/multicam_config_file.yaml"/>
   <arg name="external_manager"    default="false"/>
   <arg name="manager"             default="realsense2_framos_camera_manager"/>
   <arg name="required"            default="false"/>
