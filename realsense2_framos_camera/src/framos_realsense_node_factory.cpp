@@ -24,8 +24,8 @@ PLUGINLIB_EXPORT_CLASS(realsense2_framos_camera::FramosRealSenseNodeFactory, nod
 
 FramosRealSenseNodeFactory::FramosRealSenseNodeFactory()
 {
-	ROS_INFO("RealSense ROS v%s", REALSENSE_ROS_VERSION_STR);
-	ROS_INFO("Running with LibRealSense v%s", RS2_API_VERSION_STR);
+	ROS_INFO("RealSense ROS for FRAMOS v%s", REALSENSE_ROS_VERSION_STR);
+	ROS_INFO("Running with LibRealSense for FRAMOS v%s", RS2_API_VERSION_STR);
 
 	auto severity = rs2_log_severity::RS2_LOG_SEVERITY_WARN;
 	tryGetLogSeverity(severity);
