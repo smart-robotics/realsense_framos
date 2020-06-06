@@ -64,7 +64,7 @@ generate_messages(
 set(CMAKE_NO_SYSTEM_FROM_IMPORTED true)
 include_directories(
     include
-    ${realsense2_INCLUDE_DIR}
+    ${realsense2-framos_INCLUDE_DIR}
     ${catkin_INCLUDE_DIRS}
     )
 
@@ -99,7 +99,7 @@ target_include_directories(${PROJECT_NAME}
   PRIVATE ${realsense2_INCLUDE_DIR})
 
 target_link_libraries(${PROJECT_NAME}
-    ${realsense2_LIBRARY}
+    ${realsense2-framos_LIBRARY}
     ${catkin_LIBRARIES}
     ${CMAKE_THREAD_LIBS_INIT}
     yaml-cpp
