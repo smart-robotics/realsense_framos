@@ -2,8 +2,8 @@
 Changelog for package realsense2_camera
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.0.0 (2020-06-06)
+------------------
 * added dependency and maintainer
 * changed to correct libs
 * renaming complete, compiles
