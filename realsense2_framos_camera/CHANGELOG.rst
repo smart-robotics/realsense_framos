@@ -2,6 +2,11 @@
 Changelog for package realsense2_camera
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* corrected path to default config file
+* Contributors: Marc Hanheide
+
 3.0.1 (2020-06-06)
 ------------------
 * handle config file correctly

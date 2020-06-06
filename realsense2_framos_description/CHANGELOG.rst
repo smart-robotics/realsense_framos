@@ -2,6 +2,9 @@
 Changelog for package realsense2_framos_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 3.0.1 (2020-06-06)
 ------------------
 * changed maintainer
