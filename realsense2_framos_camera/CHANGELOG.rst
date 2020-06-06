@@ -2,6 +2,11 @@
 Changelog for package realsense2_camera
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* handle config file correctly
+* Contributors: Marc Hanheide
+
 3.0.0 (2020-06-06)
 ------------------
 * added dependency and maintainer
