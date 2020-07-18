@@ -8,6 +8,7 @@
 #include <image_transport/image_transport.h>
 #include <ros/ros.h>
 #include <ros/package.h>
+#include <geometry_msgs/TransformStamped.h>
 #include <librealsense2-framos/rs.hpp>
 #include <librealsense2-framos/rsutil.h>
 #include <librealsense2-framos/hpp/rs_processing.hpp>
@@ -47,6 +48,7 @@ namespace realsense2_framos_camera
     public:
         virtual void publishTopics() = 0;
         virtual void registerDynamicReconfigCb(ros::NodeHandle& nh) = 0;
+        virtual std::vector<geometry_msgs::TransformStamped> getStaticTransforms() = 0;
         virtual ~InterfaceRealSenseNode() = default;
     };
 
@@ -63,6 +65,7 @@ namespace realsense2_framos_camera
         void getDevice(rs2::device_list list);
         virtual void onInit() override;
         void tryGetLogSeverity(rs2_log_severity& severity) const;
+        static std::string parse_usb_port(std::string line);
 
         rs2::device _device;
         std::unique_ptr<InterfaceRealSenseNode> _realSenseNode;
@@ -72,6 +75,7 @@ namespace realsense2_framos_camera
         std::string _device_type;
         bool _initial_reset;
         std::thread _query_thread;
+        bool _is_alive;
 
     };
 }//end namespace

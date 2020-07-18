@@ -22,8 +22,8 @@ camera1:
 
   infra_width: 640
   infra_height: 480
-  enable_infra1: true
-  enable_infra2: true
+  enable_infra1: false
+  enable_infra2: false
 
   color_width: 640
   color_height: 480
@@ -45,7 +45,7 @@ camera1:
   enable_sync: false
   align_depth: false
 
-  base_frame_id: "camera1_depth_frame"
+  base_frame_id: "camera1_link"
   depth_frame_id: "camera1_depth_frame"
   infra1_frame_id: "camera1_infra1_frame"
   infra2_frame_id: "camera1_infra2_frame"
@@ -79,8 +79,8 @@ camera1:
   publish_tf: true
   tf_publish_rate: 0
 
-  odom_frame_id: "_odom_frame"
-  topic_odom_in: "/odom_in"
+  odom_frame_id: "camera1_odom_frame"
+  topic_odom_in: "camera1/odom_in"
   calib_odom_file: ""
   publish_odom_tf: true
   filters: ""
@@ -88,7 +88,7 @@ camera1:
   linear_accel_cov: 0.01
   unite_imu_method: "none" #Options are: [none, copy, linear_interpolation]
   allow_no_texture_points: false
-  
+
 camera2:
   serial_no: "" # Note: Replace with actual serial number
   ip_address: "" # Note: Replace with actual IP address
@@ -113,8 +113,8 @@ camera2:
 
   infra_width: 640
   infra_height: 480
-  enable_infra1: true
-  enable_infra2: true
+  enable_infra1: false
+  enable_infra2: false
 
   color_width: 640
   color_height: 480
@@ -136,7 +136,7 @@ camera2:
   enable_sync: false
   align_depth: false
 
-  base_frame_id: "camera2_depth_frame"
+  base_frame_id: "camera2_link"
   depth_frame_id: "camera2_depth_frame"
   infra1_frame_id: "camera2_infra1_frame"
   infra2_frame_id: "camera2_infra2_frame"
@@ -170,8 +170,8 @@ camera2:
   publish_tf: true
   tf_publish_rate: 0
 
-  odom_frame_id: "_odom_frame"
-  topic_odom_in: "/odom_in"
+  odom_frame_id: "camera2_odom_frame"
+  topic_odom_in: "camera2/odom_in"
   calib_odom_file: ""
   publish_odom_tf: true
   filters: ""
