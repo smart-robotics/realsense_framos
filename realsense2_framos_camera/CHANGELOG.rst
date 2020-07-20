@@ -2,8 +2,8 @@
 Changelog for package realsense2_camera
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+3.2.14 (2020-07-20)
+-------------------
 * Merge pull request `#5 <https://github.com/LCAS/realsense/issues/5>`_ from LCAS/for_v2.33
   imported from FRAMOS packages
 * imported from FRAMOS packages
