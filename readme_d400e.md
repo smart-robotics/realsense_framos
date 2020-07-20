@@ -59,7 +59,7 @@ source ~/.bashrc
 ```
 sudo apt-get install ros-melodic-desktop-full python-rosdep ros-melodic-ddynamic-reconfigure -y
 ```
-On Jetson TX2, change the OpenCV include path before proceeding:
+Jetson platforms flashed with JetPack version 4.3 and higher have OpenCV 4 installed. Change the OpenCV include path on these platforms before proceeding:
 ```
 sudo sed -i 's/include\/opencv/include\/opencv4/g' /opt/ros/melodic/share/cv_bridge/cmake/cv_bridgeConfig.cmake
 ```

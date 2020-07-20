@@ -4,6 +4,7 @@
 #pragma once
 
 #include "../include/realsense_node_factory.h"
+#include <tf2_ros/static_transform_broadcaster.h>
 
 namespace realsense2_framos_camera
 {
@@ -35,13 +36,17 @@ namespace realsense2_framos_camera
         void change_device_callback(rs2::event_information& info);
         void getDevice(rs2::device_list list);
         void getDeviceFromBag();
+        void publishStaticTransforms();
         virtual void onInit() override;
         void tryGetLogSeverity(rs2_log_severity& severity) const;
+        static std::string parse_usb_port(std::string line);
 
         rs2::context _ctx;
         std::thread _query_thread;
+        bool _is_alive;
 
         std::vector<camera_device*> _device_list;
+        tf2_ros::StaticTransformBroadcaster _static_tf_broadcaster;
 
     };
 }//end namespace
