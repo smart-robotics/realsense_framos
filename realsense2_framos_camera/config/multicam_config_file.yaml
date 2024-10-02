@@ -1,8 +1,8 @@
 camera1:
-  serial_no: "" # Note: Replace with actual serial number
-  ip_address: "" # Note: Replace with actual IP address
+  serial_no: "6CD1460300E6" # Note: Replace with actual serial number
+  ip_address: "" # 192.168.6.199" # Note: Replace with actual IP address
   usb_port_id: ""
-  device_type: ""
+  device_type: "D435e"
   rosbag_filename: ""
   initial_reset: false
 

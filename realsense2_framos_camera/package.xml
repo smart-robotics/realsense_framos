@@ -26,7 +26,7 @@
   <depend>tf</depend>
   <depend>ddynamic_reconfigure</depend>
   <depend>diagnostic_updater</depend>
-  <depend>librealsense2_framos</depend>
+  <depend>librealsense2</depend>
   <depend>rospack</depend>
   <depend>yaml-cpp</depend>
   <export>

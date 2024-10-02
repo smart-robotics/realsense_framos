@@ -9,10 +9,10 @@
 #include <ros/ros.h>
 #include <ros/package.h>
 #include <geometry_msgs/TransformStamped.h>
-#include <librealsense2-framos/rs.hpp>
-#include <librealsense2-framos/rsutil.h>
-#include <librealsense2-framos/hpp/rs_processing.hpp>
-#include <librealsense2-framos/rs_advanced_mode.hpp>
+#include <librealsense2/rs.hpp>
+#include <librealsense2/rsutil.h>
+#include <librealsense2/hpp/rs_processing.hpp>
+#include <librealsense2/rs_advanced_mode.hpp>
 #include <cv_bridge/cv_bridge.h>
 #include <constants.h>
 #include <realsense2_framos_camera/Extrinsics.h>

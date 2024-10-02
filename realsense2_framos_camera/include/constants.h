@@ -4,6 +4,7 @@
 #pragma once
 
 #include <string>
+#include <librealsense2/h/rs_sensor.h>
 
 #define REALSENSE_ROS_MAJOR_VERSION    2
 #define REALSENSE_ROS_MINOR_VERSION    2

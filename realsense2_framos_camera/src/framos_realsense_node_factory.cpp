@@ -156,7 +156,7 @@ void FramosRealSenseNodeFactory::getDevice(rs2::device_list list)
 
     if (0 == list.size())
     {
-        ROS_WARN("No RealSense devices were found!");
+        ROS_WARN("No RealSense Framos devices were found!");
     }
     else
     {
@@ -233,7 +233,7 @@ void FramosRealSenseNodeFactory::getDevice(rs2::device_list list)
                             _device_list[i]->ip_address = ip;
                             _device_list[i]->is_found = true;
 
-                            bool remove_tm2_handle(_device_list[i]->device && RS_T265_PID != std::stoi(_device_list[i]->device.get_info(RS2_CAMERA_INFO_PRODUCT_ID), 0, 16));
+                            bool remove_tm2_handle(_device_list[i]->device && RS_T265_PID != RS435_RGB_PID);//std::stoi(_device_list[i]->device.get_info(RS2_CAMERA_INFO_PRODUCT_ID), 0, 16));
                             if (remove_tm2_handle)
                             {
                                 _ctx.unload_tracking_module();
@@ -404,7 +404,8 @@ void FramosRealSenseNodeFactory::StartDevice(camera_device *device)
     ros::NodeHandle nh(nh_namespace.c_str());
     
     std::string pid_str(device->device.get_info(RS2_CAMERA_INFO_PRODUCT_ID));
-    uint16_t pid = std::stoi(pid_str, 0, 16);
+    uint16_t pid =  RS435_RGB_PID;
+    //std::stoi(pid_str, 0, 16);
     switch(pid)
     {
     case SR300_PID:
